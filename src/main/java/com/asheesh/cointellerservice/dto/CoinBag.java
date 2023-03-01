@@ -1,5 +1,8 @@
 package com.asheesh.cointellerservice.dto;
 
+/**
+ * Represents a coin, and it's count in the API response
+ */
 public class CoinBag {
     private Integer denomination;
     private Integer count;

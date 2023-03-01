@@ -6,6 +6,7 @@ Coin Teller Service is service to exchange bills to coins
 Use following service to exchange your bill to coins
 
 API: [POST] /coin-changer/change-bill
+
 Sample Request:
 ```sh
 {

@@ -20,10 +20,9 @@ public class AppConfig {
     {
         HikariConfig config = new HikariConfig();
         config.setDataSourceClassName("org.h2.jdbcx.JdbcDataSource");
-        config.setConnectionTestQuery("VALUES 1");
-        config.addDataSourceProperty("URL", "jdbc:h2:~/test");
-        config.addDataSourceProperty("user", "sa");
-        config.addDataSourceProperty("password", "sa");
+        config.addDataSourceProperty("URL", appProps.getH2Url());
+        config.addDataSourceProperty("user", appProps.getH2UserName());
+        config.addDataSourceProperty("password", appProps.getH2Password());
         HikariDataSource dataSource = new HikariDataSource(config);
         return dataSource;
     }
